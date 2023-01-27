@@ -1,0 +1,723 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@font-face {
+    font-family: bestermind;
+    src: url(BestermindRegular.ttf);
+}
+*{
+    padding: 0;
+    margin :0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family:"Poppins",sans-serif;
+}
+
+.background{
+    background-image: linear-gradient(to left,#566770 40%, #053f5e);
+    border-radius: 0 100% 0 0;
+}
+
+body{
+    background-color: #082032;
+}
+
+.navbar-container{
+    height: 6.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 3rem;
+    padding-top: 1.5rem;
+}
+
+.navbar a{
+    margin: 1rem;
+    font-size: 20px;
+    transition: .5s ease;
+    color: aqua;
+    border: 2px solid aqua;
+    border-radius: 3.5rem;
+    font-weight: 400;
+    padding: 12px 24px;
+    letter-spacing: 1px;
+}
+
+.navbar i{
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    color: rgb(5, 63, 94);
+    background-color: aqua;
+    cursor: pointer;
+}
+.namelogo{
+    font-size: 2.6rem;
+    font-weight: bold;
+    font-family: "bestermind";
+    color: aqua;
+}
+.hamburger{
+    cursor: pointer;
+    display: block;
+}
+.bar{
+    display: block;
+    width: 35px;
+    height: 3px;
+    margin: 7px auto;
+    background-color:snow;
+    transition: .2s;
+}
+
+   /* hamburger design code */
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(9.5px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-9.5px) rotate(-45deg);
+    }
+    .navbar{
+        display:flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position:fixed;
+        left: -100%;
+        top: 0;
+        flex-direction:column;
+        background-color: #082032;
+        width: 100%;
+        text-align: center;
+        transition: .5s;
+    }
+    .navbar.active{
+        left:0;
+        width:fit-content;
+        height: 100%;
+        border-radius: 0% 5% 5% 0%;
+        padding: 2rem 2.5rem 7rem 2.5rem;
+        background-color: #053F5E;
+        z-index: 1000;
+    }
+    .landing-page{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 1.4rem;
+        overflow-x:hidden;
+    }
+    .left-content{
+        background-color:initial;
+        width: 50%;
+        padding: 3rem 2rem;
+    }
+    h3{
+        color: snow;
+    }
+    .left-content h1{
+        color: aqua;
+        font-weight: 800;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+    }
+    .left-content .intro{
+        color: snow;
+        font-size: 1.2rem;
+        word-spacing:1.2px;
+        margin-top: .75rem;
+        line-height: 1.4;
+    }
+    .texts{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 5rem;
+    }
+    .btns{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 330px;
+    }
+    .btns a{
+        display: flex;
+        text-decoration: none;
+        width:fit-content;
+        height: fit-content;
+        border-radius: 25px;
+        padding: 10px 20px;
+        text-decoration: none;
+        letter-spacing: 1px;
+        font-size: 18px;
+        transition: .3s ease;
+        margin-top: 1.5rem;
+    }
+    .Resumebtn{
+        border: 2px solid aqua;
+        background-color:initial;
+        color: aqua;
+    }
+    .Contactbtn{
+        border: 2px solid #00ffff;
+        background-color: aqua;
+        color:initial;
+    } 
+    .Resumebtn:hover{
+        color:snow;
+        background-color:grey;
+        cursor: pointer;
+        border-color: grey;
+    }
+    
+    .Contactbtn:hover{
+        color:snow;
+        background-color:grey;
+        border-color: grey;
+        cursor: pointer;
+    }
+    .themebtn i{
+        color:snow;
+        display: block;
+        width: 1rem;
+        height: 1rem;
+    }
+    .right-content{
+       width: 50%;
+       padding: 3rem 3rem 0 3rem;
+       display: flex;
+       justify-content: space-between;
+       overflow: hidden;
+    }
+    svg{
+        transition: .7s ease-in-out;
+    }
+    svg:hover{
+        transform:scale(1.15);
+        cursor: pointer;
+    }
+    .social{
+        display: flex;
+        align-items: flex-end;
+        width: 64px;
+    }
+    .social-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 7rem;
+        width: 5rem;
+    }
+    .social a{
+        display: flex;
+        text-decoration: none;
+        color: snow;
+        height: 3rem;
+        width: 3rem;
+        align-items: center;
+        justify-content: center;
+        background-color: hsl(201, 90%, 19%);
+        border-radius: 50%;
+        transition: .4s ease-in-out;
+    }
+    .social a:hover{
+     transform:scale(1.1);
+     color:aqua;
+     cursor: pointer;
+    }
+    .back-to-top {
+        position: fixed;
+        color:aqua;
+        background-color: rgba(255, 250, 250,0.4);
+        border-radius: 50%;
+        height: 3rem;
+        width: 3rem;
+        right: 2rem;
+        border:none;
+        bottom: 2rem;
+        z-index: 110;
+      }
+     .hidden{
+        display: none;
+      }
+    fieldset{
+        margin: 0 2rem;
+    }
+    .education-card
+    {   
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2.5rem;
+        border-radius: 0% 45% 45% 0%;
+    }
+    .education-title{
+        color:aqua;
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    .vector-art{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 40rem;
+    }
+    .education{
+        display: flex;
+        flex-direction: column;
+        width:60%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-right: 1.5rem;
+    }
+    .education h1{
+        color: aqua;
+        font-size: 2rem;
+    }
+    .education p{
+        color: snow;
+    }
+    .education div{
+        background:rgba(8, 32, 50,0.6);
+        width: 100%;
+        border-radius: 14px;
+        height: 10rem;
+        padding: 10px;
+        overflow: hidden;
+    }
+    .grad{
+        display: flex;
+        box-shadow: 9px 7px 13px 0px aqua;
+    }
+    .grad .logo{
+        align-self:flex-start;
+        width:fit-content;
+        height: 100%;
+        background: none;
+        color: aqua;
+        height: fit-content;
+    }
+    .grad .logo::after{
+        content: "";
+        margin:10px;
+    }
+    .grad .contents{
+        width: 100%;
+        background: none;
+        height: fit-content;
+    }
+    .contents h4{
+        color: #00ffff;
+    }
+    .contents h2{
+        color: snow;
+    }
+    .education .eduintro{
+        padding-left: 1.4rem;
+        height: 10.5rem;
+        line-height: 1.4;
+        box-shadow: 9px 7px 13px 0px aqua;
+        padding-bottom: 1.2rem;
+    }
+    .eduintro p{
+        text-align: justify;
+    }
+    .Projects{
+        margin-top: 2rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        padding: 2rem 2rem;
+        z-index: 80;
+    }
+    .Projects h1{
+        color: #00ffff;
+        height: 100%;
+        font-size: 3rem;
+        font-weight: 600;
+    }
+     .projectbox{
+    display: flex;
+    width: 100%;
+    height: 40rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    } 
+   .Project-container .card{
+    position:absolute;
+    transform-style:preserve-3d;
+    transform: translateY(0deg);
+    backface-visibility: hidden;
+    transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+    background: #053F5E;
+    height: 20rem;
+    width: 19rem;
+    border-radius: 10px;
+   }
+   .Project-container:hover > .front-face{
+    transform: rotateY(-180deg);
+    cursor: pointer;
+   }
+   .Project-container .card img{
+    height: 20rem;
+    width: 19rem;
+    border-radius: 10px;
+   }
+   .Project-container .back-face{
+    display:flex;
+    align-items: center;
+    background:snow;
+    cursor: pointer;
+    padding: 1rem;
+    justify-content: flex-start;
+    flex-direction: column;
+    transform: rotateY(180deg);
+    margin: 1rem;
+    border: 5px solid #00ffff;
+   } 
+   .Project-container .back-face ol{
+     margin-top: .5rem;
+     font-weight: 500;
+     font-size: large;
+    }
+   .Project-container .back-face h2{
+     background: linear-gradient(to top, #00ffff , #053F5E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.2rem;
+    margin-bottom: .5rem;
+   }
+   .Project-container:hover > .back-face{
+    transform: rotateY(0deg);
+   }
+   .Project-container{
+    position:relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    height: 20rem;
+    width: 19rem;
+   }
+   .Contact-block{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    padding :2rem;
+    background-color: initial;
+   overflow: hidden;
+   display: flex;
+   z-index: 20;
+   flex-wrap: wrap;
+   flex-direction: column;
+   align-items: center;
+}
+.Contact-block h1{
+    line-height: 1;
+    color: snow;
+    margin-left: 1.2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.contact-container{
+display: flex;
+overflow: hidden;
+background:rgba(255, 250, 250,0.2);
+border-radius: 12px;
+justify-content: center;
+align-items: flex-start;
+width: 100%;
+z-index: 25;
+height:40rem;
+}
+form{
+    overflow: hidden;
+    position: relative;
+}
+.input-container{
+    position: relative;
+    margin: 1rem 1rem;
+    padding: .2rem .2rem;
+    }
+.contact-container .leftcontact{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color:snow;
+    padding: 1rem 4rem 1rem 1rem;
+    height: 100%;
+}
+.contact-container .rightcontact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color:#053f5e;
+    padding: 1rem 4rem 1rem 1rem;
+    height: 100%;
+    width: 50%;
+}
+.rightcontact .inputbox{
+    color:snow;
+    width: 100%;
+    outline: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    border-radius: 2rem;
+    transition: 0.3s;
+    margin: .5rem .5rem .5rem 0rem;
+    border: 2px solid snow;
+    background:initial;
+}
+textarea {
+    padding: 0.8rem 1.2rem;
+    min-width: 130px;
+    border-radius: 10px;
+    resize: none;
+    overflow: auto;
+}
+.rightcontact .sendbtn{
+    border: 2px solid snow;
+    background-color:snow;
+    color:#082032;
+    font-size: 1rem;
+    margin: 0.6rem 0 .5rem 1.2rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+    height: 2.5rem; width: 6rem;
+}
+.sendbtn:hover{
+    color:snow;
+    background-color:grey;
+    border-color: grey;
+    cursor: pointer;   
+}
+.leftcontact h1{
+    color: #053f5e;
+}
+.leftcontact .social-icons{
+    margin-top: 1.5rem;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:10rem;
+    width: 22rem;
+}
+.social-icons .taginfo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.social-icons .taginfo b{
+    padding-left: .6rem;
+    color:#053f5e;
+    font-size: 1.2rem;
+}
+.social-box a{
+    display: flex;
+    text-decoration: none;
+    color:snow;
+    height: 3.5rem;
+    width: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(201, 90%, 19%);
+    border-radius: 50%;
+    transition: .4s ease-in-out;
+}
+
+.social-box a:hover{
+ transform:scale(1.1);
+ color:#053F5E ;
+ background-color: snow;
+ cursor: pointer;
+}
+    /* media queries */
+    @media (max-width:650px) {
+        .navbar-container{
+            /* padding-top: .75rem; */
+            padding: 0rem 1.5rem;
+        }
+        .namelogo{
+            font-size: 2rem;
+        }
+        .landing-page{
+            flex-direction: column-reverse;
+            margin: 0 .5rem 1rem .5rem;
+        }
+        .left-content{
+            width: 100%;
+            background:rgba(255, 250, 250,0.2);
+            backdrop-filter: blur(8px);
+            border-radius: 20px;
+            padding: 1rem 1rem;
+            margin: 0;
+        }
+        .right-content{
+            width:100%;
+            padding: 2rem 2rem 0 2rem;
+        }
+        .texts{
+            margin-top:1rem;
+            text-align: center;
+        }
+        .texts .intro{
+            font-size: .95rem;
+            text-align: center;
+            padding: 0 1rem;
+        }
+        h1{
+            font-size: 1.8rem;
+            margin-bottom:.6rem;
+        }
+        h3{
+            margin-bottom: .2rem;
+        }
+        .btns{
+            font-size: 14px; 
+            align-self: center;
+            width: 280px;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .btns a{
+            font-size: 1rem;
+            padding: 5px 10px;
+        }
+        .social{
+            width: 2rem;
+        }
+       .social a{
+        height: 2.5rem;
+        width: 2.5rem;
+       }  
+       fieldset{
+        margin: .5rem;
+        border: none;
+       }
+       .education-title{
+        font-size: 1.8rem;
+       }
+       .education-card{
+        flex-direction: column;
+        padding: .6rem;
+       }
+       .vector-art{
+        width: 100%;
+        height: 30%;
+       }
+       .education{
+        padding-bottom: 1rem;
+        display: flex;
+        width:100%;
+        height: 27rem;
+        justify-content: space-between;
+        padding-right: 0;
+        margin-top: 0;
+       }
+       .grad{
+        box-shadow: 4px 5px 10px 0px aqua;
+       }
+       .education div{
+        height: 6.2rem;
+        padding: 5px;
+       }
+       .contents{
+        line-height: 1.1;
+       }
+       .contents i{
+        font-size: smaller;
+       }
+       .contents h3{
+        font-size: .8rem;
+       }
+       .contents h2{
+        font-size: 1rem;
+       }
+       .eduintro h1{
+        font-size: 1.2rem;
+        margin-bottom: 0;
+       }
+       .eduintro p{
+        font-size: .95rem;
+        line-height: 1.2;
+       }
+      .education .eduintro{
+        padding-left: 1rem;
+        box-shadow: 4px 5px 10px 0px aqua;
+        height: 11rem;
+       }
+       .Projects{
+        margin-top: 1rem;
+        padding:1rem;
+       }
+       .Projects .projectbox{
+        flex-direction: column;
+        height: 68rem;
+        justify-content: space-around;
+       }
+       .Projects h1{
+        font-size: 1.8rem;
+       }
+       .back-to-top {
+        right: .5rem;
+        bottom: .5rem;
+        z-index: 99;
+       }
+       .background{
+        background-image: none;
+       }
+       .Contact-block{
+        height: 60rem;
+        margin: 0;
+        padding: 0;
+       }
+       .Contact-block h1{
+        font-size: 1.6rem;
+        margin: 1rem 0 1rem 1.3rem;
+       }
+       .rightcontact .sendbtn{
+        margin-left: 1.2rem;
+       }
+      .contact-container{
+        flex-direction: column-reverse;
+        height: 62rem;
+      } 
+      .contact-container .rightcontact{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+      }
+      .contact-container .leftcontact{
+       width: 100%;
+       padding: 0;
+       margin: 0;
+       justify-content: center;
+      }
+       .contact-container .leftcontact .social-icons{
+       width: 100%;
+      }
+     .social-box a{
+        height: 2.6rem;
+        width: 2.6rem;
+    }
+    .social-icons .taginfo b{
+        padding-left: .6rem;
+        color:#053f5e;
+        font-size: .95rem;
+    }
+}
+
+
+
+    
